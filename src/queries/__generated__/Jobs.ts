@@ -14,6 +14,7 @@ export interface Jobs_jobs_tags {
 
 export interface Jobs_jobs_company {
   __typename: "Company";
+  slug: string;
   name: string;
   logoUrl: string | null;
 }
@@ -31,6 +32,7 @@ export interface Jobs_jobs_remotes {
 
 export interface Jobs_jobs {
   __typename: "Job";
+  slug: string;
   title: string;
   isFeatured: boolean | null;
   tags: Jobs_jobs_tags[] | null;

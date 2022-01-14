@@ -14,7 +14,7 @@ export const getServerSideProps: GetServerSideProps = async () => {
 
   return {
     props: {
-      jobs: data.jobs,
+      jobs: data.jobs ?? [],
     },
   };
 };

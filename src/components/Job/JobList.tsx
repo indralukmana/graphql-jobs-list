@@ -12,7 +12,7 @@ const JobList = ({ jobs }: JobListProps) => {
     <UnorderedList listStyleType="none" m={0} spacing={4}>
       {jobs.map((job) => {
         return (
-          <ListItem>
+          <ListItem key={job.slug}>
             <JobCard job={job} />
           </ListItem>
         );

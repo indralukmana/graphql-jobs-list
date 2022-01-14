@@ -7,6 +7,11 @@
 // START Enums and Input Objects
 //==============================================================
 
+export interface JobInput {
+  companySlug: string;
+  jobSlug: string;
+}
+
 //==============================================================
 // END Enums and Input Objects
 //==============================================================
