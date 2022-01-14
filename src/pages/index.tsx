@@ -1,36 +1,15 @@
-import { gql } from "@apollo/client";
 import { Box } from "@chakra-ui/react";
 import { GetServerSideProps } from "next";
 
-import { Jobs } from "__generated__/Jobs";
 import JobList from "components/Job/JobList";
 import Layout from "components/layout";
 import apolloClient from "graphql/apollo-client";
+import { Jobs } from "queries/__generated__/Jobs";
+import GET_JOBS_LIST from "queries/GET_JOBS_LIST";
 
 export const getServerSideProps: GetServerSideProps = async () => {
   const { data } = await apolloClient.query<Jobs>({
-    query: gql`
-      query Jobs {
-        jobs {
-          title
-          isFeatured
-          tags {
-            name
-          }
-          company {
-            name
-            logoUrl
-          }
-          countries {
-            name
-            type
-          }
-          remotes {
-            name
-          }
-        }
-      }
-    `,
+    query: GET_JOBS_LIST,
   });
 
   return {

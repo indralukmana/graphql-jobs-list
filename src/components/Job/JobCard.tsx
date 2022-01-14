@@ -1,6 +1,6 @@
 import { Box } from "@chakra-ui/react";
 
-import { Jobs_jobs } from "__generated__/Jobs";
+import { Jobs_jobs } from "queries/__generated__/Jobs";
 
 interface JobCardProps {
   job: Jobs_jobs;

@@ -1,7 +1,7 @@
 import { ListItem, UnorderedList } from "@chakra-ui/react";
 
-import { Jobs } from "__generated__/Jobs";
 import JobCard from "components/Job/JobCard";
+import { Jobs } from "queries/__generated__/Jobs";
 
 interface JobListProps {
   jobs: Jobs["jobs"];
