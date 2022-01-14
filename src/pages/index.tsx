@@ -1,9 +1,50 @@
+import { gql } from "@apollo/client";
 import { Box } from "@chakra-ui/react";
+import { GetServerSideProps } from "next";
 
+import { Jobs } from "__generated__/Jobs";
 import JobList from "components/Job/JobList";
 import Layout from "components/layout";
+import apolloClient from "graphql/apollo-client";
 
-const Home = () => {
+export const getServerSideProps: GetServerSideProps = async () => {
+  const { data } = await apolloClient.query<Jobs>({
+    query: gql`
+      query Jobs {
+        jobs {
+          title
+          isFeatured
+          tags {
+            name
+          }
+          company {
+            name
+            logoUrl
+          }
+          countries {
+            name
+            type
+          }
+          remotes {
+            name
+          }
+        }
+      }
+    `,
+  });
+
+  return {
+    props: {
+      jobs: data.jobs,
+    },
+  };
+};
+
+interface HomeProps {
+  jobs: Jobs["jobs"];
+}
+
+const Home = ({ jobs }: HomeProps) => {
   return (
     <Layout>
       <Box
@@ -14,7 +55,7 @@ const Home = () => {
         mb={8}
         w="full"
       >
-        <JobList />
+        <JobList jobs={jobs} />
       </Box>
     </Layout>
   );

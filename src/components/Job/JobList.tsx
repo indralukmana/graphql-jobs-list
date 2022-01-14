@@ -1,19 +1,22 @@
 import { ListItem, UnorderedList } from "@chakra-ui/react";
 
+import { Jobs } from "__generated__/Jobs";
 import JobCard from "components/Job/JobCard";
 
-const JobList = () => {
+interface JobListProps {
+  jobs: Jobs["jobs"];
+}
+
+const JobList = ({ jobs }: JobListProps) => {
   return (
-    <UnorderedList listStyleType="none" spacing={4}>
-      <ListItem>
-        <JobCard />
-      </ListItem>
-      <ListItem>
-        <JobCard />
-      </ListItem>
-      <ListItem>
-        <JobCard />
-      </ListItem>
+    <UnorderedList listStyleType="none" m={0} spacing={4}>
+      {jobs.map((job) => {
+        return (
+          <ListItem>
+            <JobCard job={job} />
+          </ListItem>
+        );
+      })}
     </UnorderedList>
   );
 };
