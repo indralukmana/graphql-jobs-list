@@ -1,9 +1,7 @@
 import { Box } from "@chakra-ui/react";
 
+import JobList from "components/Job/JobList";
 import Layout from "components/layout";
-import CTASection from "components/samples/CTASection";
-import SomeImage from "components/samples/SomeImage";
-import SomeText from "components/samples/SomeText";
 
 const Home = () => {
   return (
@@ -16,12 +14,7 @@ const Home = () => {
         mb={8}
         w="full"
       >
-        <SomeImage />
-
-        <Box>
-          <SomeText />
-          <CTASection />
-        </Box>
+        <JobList />
       </Box>
     </Layout>
   );

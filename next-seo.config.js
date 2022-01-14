@@ -1,24 +1,24 @@
 /** @type {import('next-seo').DefaultSeoProps} */
 const defaultSEOConfig = {
-  title: "nextarter-chakra",
-  titleTemplate: "%s | nextarter-chakra",
-  defaultTitle: "nextarter-chakra",
-  description: "Next.js + chakra-ui + TypeScript template",
-  canonical: "https://nextarter-chakra.sznm.dev",
+  title: "GraphQL Jobs List",
+  titleTemplate: "%s | GraphQL Jobs List",
+  defaultTitle: "GraphQL Jobs List",
+  description: "GraphQL Jobs List",
+  canonical: "https://graphql-jobs-list.vercel.app",
   openGraph: {
-    url: "https://nextarter-chakra.sznm.dev",
-    title: "nextarter-chakra",
-    description: "Next.js + chakra-ui + TypeScript template",
+    url: "https://graphql-jobs-list.vercel.app",
+    title: "GraphQL Jobs List",
+    description: "GraphQL Jobs List",
     images: [
       {
         url: "https://og-image.sznm.dev/**nextarter-chakra**.sznm.dev.png?theme=dark&md=1&fontSize=125px&images=https%3A%2F%2Fsznm.dev%2Favataaars.svg&widths=250",
-        alt: "nextarter-chakra.sznm.dev og-image",
+        alt: "graphql jobs list og-image",
       },
     ],
-    site_name: "nextarter-chakra",
+    site_name: "graphql-jobs-list",
   },
   twitter: {
-    handle: "@sozonome",
+    handle: "@indluk",
     cardType: "summary_large_image",
   },
 };
