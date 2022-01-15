@@ -13,6 +13,7 @@ To run the application first make sure you have the following setup in your mach
 
 - NodeJS 14+
 - [Yarn](https://classic.yarnpkg.com/en/) package manager (you can also use NPM but the following guides will use `Yarn`)
+- For Windows user, Next.js with the recent SWC  default might still have some issues so you might need to use WSL in Windows
 
 Then install the dependencies execute
 
