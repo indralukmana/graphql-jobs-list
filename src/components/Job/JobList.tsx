@@ -10,9 +10,9 @@ interface JobListProps {
 const JobList = ({ jobs }: JobListProps) => {
   return (
     <UnorderedList listStyleType="none" m={0} spacing={4}>
-      {jobs.map((job) => {
+      {jobs.map((job, index) => {
         return (
-          <ListItem key={job.slug}>
+          <ListItem key={job.slug + index}>
             <JobCard job={job} />
           </ListItem>
         );
